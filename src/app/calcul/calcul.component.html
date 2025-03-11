@@ -1,1 +1,9 @@
-<p>calcul works!</p>
+<form class="form-group" [formGroup]="calcul_data">
+    <label for="date-debut" class="form-label">Date Début:</label>
+    <input class="form-control" id="date-debut" placeholder="Date Début" FormControlName="date_debut" type="date"/>
+    <div style="color: red;" *ngIf="calcul_data.get('date_debut')?.errors">Date début nécessaire</div>
+    <label for="date-fin" class="form-label">Date Fin:</label>
+    <input class="form-control" id="date-fin" placeholder="Date Fin" FormControlName="date_fin" type="date"/>
+    <div style="color: red;" *ngIf="calcul_data.get('date_fin')?.errors">Date fin nécessaire</div>
+    <button class="btn btn-primary">Afficher les heures supplémentaires</button>
+</form>
