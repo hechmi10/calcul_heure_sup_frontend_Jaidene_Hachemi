@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeureSups } from '../models/HeureSups';
 
 @Component({
   selector: 'app-heure-sups',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './heure-sups.component.css'
 })
 export class HeureSupsComponent {
-
+  listHeuresSups!:HeureSups[];
 }

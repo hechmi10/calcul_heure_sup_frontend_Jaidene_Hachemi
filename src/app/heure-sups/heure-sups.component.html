@@ -1,1 +1,12 @@
-<p>heure-sups works!</p>
+<table class="table table-striped">
+    <tr>
+        <th>Nom Employé</th>
+        <th>Prènom Employé</th>
+        <th>Heures Supplémentaires</th>
+    </tr>
+    <tr *ngFor="let hs of listHeuresSups">
+        <td>{{hs.employe.name}}</td>
+        <td>{{hs.employe.surname}}</td>
+        <td>{{hs.nb_heures}}</td>
+    </tr>
+</table>
