@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -11,4 +11,7 @@ export class CalculComponent {
     date_debut:new FormControl('',[Validators.required]),
     date_fin:new FormControl('',[Validators.required])
   })
+
+ 
+
 }

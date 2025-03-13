@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { HeureSups } from '../models/HeureSups';
 import { HeureSupsService } from '../services/heure-sups/heure-sups.service';
 
@@ -34,5 +34,7 @@ export class HeureSupsComponent {
     this._service.getHeureSup(id).subscribe();
   }
 
+  @Input() date_debut!:Date
+  @Input() date_fin!:Date
   @Output() heureSupsDisplayed=new EventEmitter<HeureSups[]>()
 }
