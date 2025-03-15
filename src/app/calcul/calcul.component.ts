@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output, QueryList, ViewChildren } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { HeureSups } from '../models/HeureSups';
+import { HeureSupsComponent } from '../heure-sups/heure-sups.component';
 
 @Component({
   selector: 'app-calcul',
@@ -12,6 +14,12 @@ export class CalculComponent {
     date_fin:new FormControl('',[Validators.required])
   })
 
- 
+  @ViewChildren(HeureSupsComponent) heure_sups!:QueryList<HeureSups>
+  private heure_sup!:HeureSupsComponent
+
+  onShowHeuresSups(){
+    this.heure_sup.getAllHeuresSups();
+  }
+
 
 }

@@ -1,4 +1,4 @@
-<form class="form-group" [formGroup]="calcul_data">
+<form class="form-group" [formGroup]="calcul_data" (ngSubmit)="onShowHeuresSups()">
     <label for="date-debut" class="form-label">Date Début:</label>
     <input class="form-control" id="date-debut" placeholder="Date Début" FormControlName="date_debut" type="date"/>
     <div style="color: red;" *ngIf="calcul_data.get('date_debut')?.errors">Date début nécessaire</div>
